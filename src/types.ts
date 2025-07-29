@@ -46,4 +46,19 @@ export interface MatchedUser {
   timeTaken: number;
   lastActivity: string;
   serviceType: string;
+  eventId: string;
+}
+
+export interface QuizCategory {
+  id: string;
+  name: string;
+  description: string;
+  color: string;
+  icon: string;
+}
+
+export interface LeaderboardData {
+  categories: QuizCategory[];
+  leaderboards: Record<string, MatchedUser[]>;
+  totalUsers: number;
 }
